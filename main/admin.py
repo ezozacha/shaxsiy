@@ -6,4 +6,3 @@ from main.models import Post
 admin.site.register(PortfolioItem)
 admin.site.register(Contact)
 admin.site.register(Post)
-
