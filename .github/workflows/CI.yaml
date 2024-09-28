@@ -3,12 +3,12 @@ name: Shaxsiy Backend
 on:
   push:
     branches:
-      -main
+      - main
 
   pull_request:
     branches:
     - main
-    
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -20,16 +20,13 @@ jobs:
           python-version: "3.11"
       - name: Install dependencies
         run: |
-         python3 -m pip install --upgratde pip setuptools wheel
-         pip install -r requirements.txt
+          python3 -m pip install --upgrade pip setuptools wheel
+          pip install -r requirements.txt
       - name: Lint with flake8
         run: |
           pip install flake8
           flake8
       - name: Run tests with coverage
-        env:
-          SECERET_KEY: ${{secrets.SECRET_KEY}}
-          DEBUG: ${{secrets.DEBUG}}
 
         run: |
           python manage.py test
