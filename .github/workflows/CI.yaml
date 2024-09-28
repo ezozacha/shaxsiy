@@ -2,8 +2,8 @@ name: Shaxsiy Backend
 
 on:
   push:
-    banches:
-    -main
+    branches:
+      -main
 
 jobs:
   build:
