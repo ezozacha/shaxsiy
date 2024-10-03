@@ -2,7 +2,7 @@ name: Shaxsiy Backend
 
 on:
   push:
-    branches:
+    banches:
       - main
 
   pull_request:
@@ -34,7 +34,7 @@ jobs:
         run: |
           python manage.py test
 
-        - name: Email jo'natish
+      - name: Email jo'natish
         env:
           SECRET_KEY: ${{secrets.SECRET_KEY}}
           DEBUG: ${{secrets.DEBUG}}
