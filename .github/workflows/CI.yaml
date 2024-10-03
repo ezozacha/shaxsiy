@@ -27,6 +27,18 @@ jobs:
           pip install flake8
           flake8
       - name: Run tests with coverage
+        env:
+          SECRET_KEY: ${{secrets.SECRET_KEY}}
+          DEBUG: ${{secrets.DEBUG}}
 
         run: |
           python manage.py test
+
+        - name: Email jo'natish
+        env:
+          SECRET_KEY: ${{secrets.SECRET_KEY}}
+          DEBUG: ${{secrets.DEBUG}}
+
+        run: |
+          python manage.py ci_mail
+
