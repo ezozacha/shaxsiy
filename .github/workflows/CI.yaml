@@ -72,5 +72,5 @@ jobs:
 
       - name: Deploy to Server
         run: |
-          ssh root@146.190.217.162 "cd ../home/shaxsiy && git pull && ./deploy.sh"
+          ssh root@146.190.217.162 "cd ../home/gunicorn && git pull && ./deploy.sh"
         shell: bash
