@@ -14,4 +14,4 @@ python manage.py migrate
 
 python manage.py collectstatic --noinput
 
-sudo systemctl restart shaxsiy
+sudo systemctl restart gunicorn
