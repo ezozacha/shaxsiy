@@ -1,10 +1,10 @@
 
 from django.core.management.base import BaseCommand
 
-from main import send_mail
+from django.core.mail import send_mail
 
 
-class Common(BaseCommand):
+class Command(BaseCommand):
     help = 'Send CI notification'
 
     def handle(self, *args, **options):
